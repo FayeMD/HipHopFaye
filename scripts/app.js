@@ -13,6 +13,16 @@ var app = angular
       .when('/', {
         templateUrl: 'views/main.html'        
       })
+      .when('/post', {
+        templateUrl: 'views/post.html',
+        controller: 'TaskController'
+      })
+      .when('/edit', {
+        templateUrl: 'views/edit.html'
+      })
+      .when('/browse', {
+        templateUrl: 'views/browse.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
