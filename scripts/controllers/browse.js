@@ -75,4 +75,13 @@ app.controller('BrowseController', function($scope, $routeParams, toaster, Task,
 		});
 	};
 
+	$scope.cancelOffer = function(offerId) {
+		Offer.cancelOffer($scope.selectedTask.$id, offerId).then(function() {
+			toaster.pop('success', "Your offer has been cancelled");
+
+			$scope.alreadyOffered = false;
+			$scope.block = false;
+		});
+	};
+
 });
