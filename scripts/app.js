@@ -9,7 +9,7 @@ var app = angular
     'toaster',
     'angularMoment'
   ])
-  .constant('FURL', 'https://fayemd.firebaseio.com/') 
+  .constant('FURL', 'https://fayeuit.firebaseio.com/') 
   .run(function($rootScope, $location) {
     $rootScope.$on("$routeChangeError", function(event, next, previous, error) {
       // We can catch the error thrown when the $requireAuth promise is rejected

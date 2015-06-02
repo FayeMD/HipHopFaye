@@ -14,8 +14,7 @@
 
   		createTask: function(task) {
   			task.datetime = Firebase.ServerValue.TIMESTAMP;
-  			return tasks.$add(task)
-          .then(function(newTask) {
+  			return tasks.$add(task).then(function(newTask) {
 
             var obj = {
               taskId: newTask.key(),
@@ -24,7 +23,7 @@
             };
 
             return $firebase(ref.child('user_tasks').child(task.poster)).$push(obj);
-            return newTask;
+            // return newTask;
         });
   		},
 
